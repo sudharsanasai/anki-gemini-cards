@@ -20,3 +20,5 @@ ts/.svelte-kit
 .yarn
 .claude/settings.local.json
 .claude/user.md
+qt/aqt/gemini_config.json
+user/
