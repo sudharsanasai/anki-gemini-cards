@@ -93,6 +93,16 @@
        </widget>
       </item>
       <item>
+       <widget class="QLabel" name="labelSourceLink">
+        <property name="text">
+         <string notr="true">Source Link</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="inputSourceLink"/>
+      </item>
+      <item>
        <widget class="QPushButton" name="btnGenerateAI">
         <property name="text">
          <string notr="true">GenerateWithAI</string>

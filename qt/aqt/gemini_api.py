@@ -22,8 +22,8 @@ class GeminiAPI:
             data = json.load(f)
         return data["instruction"]
 
-    def generate_cards(self, topic, num_cards):
-        instruction = self.load_instruction().format(topic=topic, num_cards=num_cards)
+    def generate_cards(self, topic, num_cards, source_link):
+        instruction = self.load_instruction().format(topic=topic, num_cards=num_cards, source_link=source_link)
         payload = {
             "contents": [{"parts": [{"text": instruction}]}]
         }

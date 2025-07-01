@@ -418,12 +418,16 @@ class AddCards(QMainWindow):
     def on_generate_ai(self):
         topic = self.form.inputTopic.text().strip()
         num_cards = self.form.inputNumCards.value()
+        source_link = self.form.inputSourceLink.text().strip()
         if not topic:
             showWarning("Please enter a topic.")
             return
+        if not source_link:
+            showWarning("Please enter a source link.")
+            return
         try:
             gemini = GeminiAPI()
-            cards = gemini.generate_cards(topic, num_cards)
+            cards = gemini.generate_cards(topic, num_cards, source_link)
         except Exception as e:
             showWarning(f"Error generating cards: {e}")
             return
