@@ -422,9 +422,6 @@ class AddCards(QMainWindow):
         if not topic:
             showWarning("Please enter a topic.")
             return
-        if not source_link:
-            showWarning("Please enter a source link.")
-            return
         try:
             gemini = GeminiAPI()
             cards = gemini.generate_cards(topic, num_cards, source_link)
